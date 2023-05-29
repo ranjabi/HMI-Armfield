@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;800&display=swap');
+
+/* .recbox{
+    padding-top: 15vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.box{
+    width: 18vw;
+    height: 15vh;
+    margin-right: 2.5vw;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+} */
+
+.dashbox{
+    background: #F2F2F8;
+}
+
+.grid-container {
+    width: 100%;
+    justify-content: center;
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: 17vw 17vw 17vw 17vw;
+    grid-auto-rows: 15vh 48vh 48vh;
+    grid-gap: 3vw;
+  }
+
+  .item {
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 4px; 
+  }
+  
+  .item5 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .item6 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+
+  .item7 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .item8 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+
+  .item .graphttl{
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+  }
+
+  .item .imgbox {
+    /* position: absolute; */
+    display: inline;
+    margin-top: 3vh;
+    padding-right: 0;
+  }
+
+  .item .imgbox img{
+    margin-right: 0.9vw;
+    width: 22px;
+    height: 22px;
+  }
+
+  .item .graphic{
+    margin-top: 0vh;
+    width: 96%;
+    height: 69%;
+  }
+
+  .item h6{
+    /* position: absolute; */
+    margin-top: 3vh;
+    margin-left: 9vw;
+    margin-right: 3.2vw;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.02em; 
+    color: #004EDA;
+  }
+
+  .item7 h6{
+    margin-left: 15%;
+  }
+
+  .item8 h6{
+    margin-left: 11vw;
+    margin-right: 7.5vw;
+  }
+
+  .item h5{
+    height: 0;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    color: #5A5A5F;
+    margin-top: 2.5vh;
+    margin-left: 1vw;
+}
+
+.item p{
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 29px;
+    letter-spacing: 0.02em; 
+    color: #004EDA;
+    margin-left: 1vw;
+    margin-top: 0vh;
+}
