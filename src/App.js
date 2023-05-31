@@ -3,10 +3,14 @@ import './App.css';
 import Header from './component/header';
 import Login from './pages/login'
 import Dashboard from './pages/dashboard';
+import Profile from './pages/profilePage';
 
 function App() {
   return (
-    <Dashboard />  
+    <Dashboard /> 
+    // <HMI />
+    // <Login />
+    // <Profile /> 
   );
 }
 
