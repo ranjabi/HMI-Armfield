@@ -19,7 +19,7 @@ const Login = () =>{
                             <input type="password" id="password" name="password" placeholder ="Enter PIN" required />
                         </div>
                         <h4>Forgot Password? Call your supervisor</h4>
-                        <button type="submit" className="btn-login">Login</button>
+                        <a href='/dashboard'><button type="submit" className="btn-login">Login</button></a>
                     </form>
                 </div>
             </div>
