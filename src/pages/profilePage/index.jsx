@@ -20,8 +20,10 @@ const Profile = () => {
                             <h6>Email</h6>
                             <p>blablabla@gmail.com</p>
                         </div>
-                    </div>    
-                    <button type="submit" className="btn-edit">Edit Profile</button>
+                    </div>   
+                    <div className='prof-button'>
+                        <button type="submit" className="btn-edit">Edit Profile</button>
+                    </div> 
                 </div>
             </div>
         </>

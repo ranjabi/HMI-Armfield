@@ -7,7 +7,7 @@ const Header = () => {
                 <a href = "/">
                     <img src={Main}/>
                 </a>
-                <div className="nav">
+                <div className="nav" id="overlayNav">
                     <ul>
                         <li><a href = "/">Dashboard</a></li>
                         <li><a href = "#/hmi">HMI</a></li>
@@ -17,6 +17,9 @@ const Header = () => {
                     </ul>
                 </div>
             </div>  
+
+            <script>
+            </script>
         </>
     )
 }

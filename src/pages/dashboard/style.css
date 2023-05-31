@@ -125,3 +125,20 @@
     margin-left: 1vw;
     margin-top: 0vh;
 }
+
+@media (max-width: 768px){
+  .grid-container {
+    grid-template-columns: 30vw 30vw;
+    grid-template-rows: 15vh 15vh 48vh 48vh 48vh 48vh;
+  }
+
+  .item6 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .item8 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}

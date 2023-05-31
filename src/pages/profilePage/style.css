@@ -55,24 +55,74 @@
     height: 100%;
 }
 
+.prof-button{
+    grid-column: span 2;
+    grid-row-start: 4;
+    place-self: start center;
+    height: 50px;
+    width: 500px;
+    padding: 10px;
+}
 
 .btn-edit{
     background-color: #007bff;
     border: none;
     cursor: pointer;
     font-family: 'Poppins';
-    height: 50px;
-    width: 500px;
-    padding: 10px;
+    height: 100%;
+    width: 100%;
     color: #fff;
     font-weight: 500;
     font-size: 20px;
     border-radius: 4px;
-    grid-column: span 2;
+    /* grid-column: span 2;
     grid-row-start: 4;
-    place-self: start center;
+    place-self: start center; */
 }
 
 .btn-edit:hover {
     background-color: #0056b3;
-  }
+}
+
+@media (max-width: 768px){
+    .prof-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        padding-top: 10vh;
+    }
+
+    .prof-img{
+        width: 200px;
+        height: 200px;
+    }
+
+    .prof-img > img{
+        object-fit: contain;
+    }
+
+    .prof-button{
+        padding: 0px;
+        width: 100%;
+        min-width: 200px;
+        max-width: 250px;
+        place-self: center;
+    }
+
+    .flex-username{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-row-start: 3;
+    }
+
+    .flex{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
