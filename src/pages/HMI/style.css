@@ -1,0 +1,16 @@
+
+.gambar {
+    position: absolute;
+    width: auto;
+    height: 100%;
+    top: 124px;
+    left: 35vh;
+}
+
+.gambar > img {
+    width: auto;
+    height: 100vh;
+    /* padding: 0;
+    margin: 0; */
+    object-fit: fill;
+}
