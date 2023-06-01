@@ -14,24 +14,6 @@
     object-fit: fill;
 }
 
-/* label {
-    font-family: 'Poppins';
-    font-weight: 500;
-    font-size: 15px;
-    display: block;
-    margin-bottom: 3px;
-} */
-
-/* .T1 {
-    position: absolute;
-    margin-bottom: 50px;
-} */
-
-/* .T3 {
-    position: absolute;
-    margin-top: 50px;
-} */
-
 input[type="number"] {
     width: 50px;
     height: auto;
@@ -46,10 +28,6 @@ input::placeholder {
     font-weight: 100;
     opacity: 1;
 }
-
-/* .ilustrasi {
-    position: relative;
-} */
 
 .T1,
 .T3 {
