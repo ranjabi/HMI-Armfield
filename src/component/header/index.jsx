@@ -1,5 +1,6 @@
 import Main from '../../assets/mainlogo.svg'
 import './style.css'
+
 const Header = () => {
     return (
         <>
@@ -17,9 +18,6 @@ const Header = () => {
                     </ul>
                 </div>
             </div>  
-
-            <script>
-            </script>
         </>
     )
 }
