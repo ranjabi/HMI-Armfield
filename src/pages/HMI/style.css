@@ -18,7 +18,6 @@
 input[type="number"] {
     width: 50px;
     height: 35px;
-    /* padding: 8px; */
     border-radius: 4px;
     border: 1px solid #ccc;
     margin-bottom: 5px;
@@ -27,8 +26,6 @@ input[type="number"] {
 .SP1,
 .SP2 {
     position: absolute;
-    /* transform: translate(5%, 5%); */
-    /* background-color: #F0F0F0; */
     padding: 10px;
 }
 
@@ -138,7 +135,7 @@ input[type="number"] {
     }
 
     .SP2 {
-        top: 51.5%;
+        top: 53%;
         left: 29.5%;
     }
 
@@ -156,8 +153,8 @@ input[type="number"] {
         top: 150px;
     }
     input[type="number"] {
-        width: 30px;
-        height: 20px;
+        width: 25px;
+        height: 15px;
         padding: 2px;
         border-radius: 2px;
         border: 0.5px solid #ccc;
@@ -192,11 +189,10 @@ input[type="number"] {
         margin-right: 2px;
     }
 }
-/* mobile L */
+/* mobile L
 @media (min-width: 376px) and (max-width: 480px) {
     .ilustrasi{
         height: 50vh;
-        /* top: 0px; */
     }
     input[type="number"] {
         width: 5px;
@@ -234,9 +230,9 @@ input[type="number"] {
         font-weight: bold;
         margin-right: 2px;
     }
-}
+} */
 /* mobile M */
-@media (min-width: 321px) and (max-width: 375px) {
+/* @media (min-width: 321px) and (max-width: 375px) {
     .ilustrasi{
         width: 100%;
         height: 50vh;
@@ -259,7 +255,6 @@ input[type="number"] {
     .SP1,
     .SP2 {
         position: absolute;
-        /* transform: translate(-50%, -50%);   */
         font-size: 4px;
         top: 30%;
         width: 25px;
@@ -275,8 +270,6 @@ input[type="number"] {
     .SP2 {
         top: 22%;
         left: 10%
-
-        /* right: 2px; */
     }
 
     .spanSP1,.spanSP2 {
@@ -286,9 +279,9 @@ input[type="number"] {
         margin-right: 2px;
         
     }
-}
+} */
 
 @font-face {
     font-family: Retropix;
-    src: url('C:\Users\LENOVO\Documents\Project IIT\hmi_armfield\src\assets\retropix.otf');
+    src: local(Retropix), url(../../assets/retropix.otf);
 }

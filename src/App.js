@@ -9,16 +9,16 @@ import {HashRouter, Routes, Navigate, Route} from "react-router-dom";
 
 function App() {
   return (
-    // <HashRouter>
-    //   <Routes>
-    //     {/* <Route exact path="/" element={<Login/>}/> */}
-    //     <Route exact path="/" element={<Dashboard/>}/>
-    //     <Route exact path = "/hmi" element = {<HMI/>}/>
-    //     <Route exact path ="/database" element={<Database/>}/>
-    //     <Route exact path = "/profile" element={<Profile/>}/>
-    //   </Routes>
-    // </HashRouter>
-    <Login/>  
+    <HashRouter>
+      <Routes>
+        {/* <Route exact path="/" element={<Login/>}/> */}
+        <Route exact path="/" element={<Dashboard/>}/>
+        <Route exact path = "/hmi" element = {<HMI/>}/>
+        <Route exact path ="/database" element={<Database/>}/>
+        <Route exact path = "/profile" element={<Profile/>}/>
+      </Routes>
+    </HashRouter>
+    // <Login/>  
   );
 }
 
