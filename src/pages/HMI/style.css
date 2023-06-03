@@ -48,24 +48,13 @@ input[type="number"] {
 }
 
 /* Membuat tata letak responsif */
-/* @media screen and (max-width: 768px) {
-    .ilustrasi {
-        height: auto;
-        padding-top: 124px;
-    }
-    
-    .T1,
-    .T3 {
-        top: 40%;
-    }
-} */
 
-/* laptop L done */
-@media (min-width: 1025px) and (max-width: 1440px) {
-    .ilustrasi{
+@media (max-width: 1440px) {
+    .ilustrasi {
         height: 90vh;
         top: 120px;
     }
+    
     input[type="number"] {
         width: 50px;
         height: 35px;
@@ -81,9 +70,9 @@ input[type="number"] {
         transform: translate(-50%, -50%);  
         font-size: 15px;
         top: 30%;
-        width: 120px;
+        width: 1200px;
         height: 7px;
-        padding: 5px;
+        /* padding: 5px; */
     }
 
     .SP1 {
@@ -96,19 +85,19 @@ input[type="number"] {
         left: 30%;
     }
 
-    .spanSP1,.spanSP2 {
-        font-family: Retropix;
+    .spanSP1,
+    .spanSP2 {
         font-size: 20px;
-        font-weight: bold;
         margin-right: 2px;
     }
 }
-/* laptop done */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .ilustrasi{
+
+@media (max-width: 1024px) {
+    .ilustrasi {
         height: 80vh;
         top: 150px;
     }
+
     input[type="number"] {
         width: 30px;
         height: 20px;
@@ -117,7 +106,7 @@ input[type="number"] {
         border: 0.5px solid #ccc;
         margin-bottom: 2px;
     }
-    
+
     .SP1,
     .SP2 {
         position: absolute;
@@ -139,19 +128,19 @@ input[type="number"] {
         left: 29.5%;
     }
 
-    .spanSP1,.spanSP2 {
-        font-family: Retropix;
+    .spanSP1,
+    .spanSP2 {
         font-size: 15px;
-        font-weight: bold;
         margin-right: 2px;
     }
 }
-/* tablet done */
-@media (min-width: 481px) and (max-width: 768px) {
-    .ilustrasi{
+
+@media (max-width: 768px) {
+    .ilustrasi {
         height: 70vh;
         top: 150px;
     }
+
     input[type="number"] {
         width: 25px;
         height: 15px;
@@ -160,7 +149,7 @@ input[type="number"] {
         border: 0.5px solid #ccc;
         margin-bottom: 2px;
     }
-    
+
     .SP1,
     .SP2 {
         position: absolute;
@@ -182,18 +171,18 @@ input[type="number"] {
         left: 27%;
     }
 
-    .spanSP1,.spanSP2 {
-        font-family: Retropix;
+    .spanSP1,
+    .spanSP2 {
         font-size: 15px;
-        font-weight: bold;
         margin-right: 2px;
     }
 }
-/* mobile L
-@media (min-width: 376px) and (max-width: 480px) {
-    .ilustrasi{
+
+@media (max-width: 480px) {
+    .ilustrasi {
         height: 50vh;
     }
+
     input[type="number"] {
         width: 5px;
         height: 5px;
@@ -202,7 +191,7 @@ input[type="number"] {
         border: 0.5px solid #ccc;
         margin-bottom: 2px;
     }
-    
+
     .SP1,
     .SP2 {
         position: absolute;
@@ -224,23 +213,16 @@ input[type="number"] {
         left: -100px;
     }
 
-    .spanSP1,.spanSP2 {
-        font-family: Retropix;
+    .spanSP1,
+    .spanSP2 {
         font-size: 7px;
-        font-weight: bold;
         margin-right: 2px;
     }
-} */
-/* mobile M */
-/* @media (min-width: 321px) and (max-width: 375px) {
-    .ilustrasi{
-        width: 100%;
-        height: 50vh;
-    }
+}
 
-    .ilustrasi > img {
-        width: 100%;
-        height: 100%;
+@media (max-width: 375px) {
+    .ilustrasi {
+        height: 50vh;
     }
 
     input[type="number"] {
@@ -251,7 +233,7 @@ input[type="number"] {
         border: 0.5px solid #ccc;
         margin-bottom: 2px;
     }
-    
+
     .SP1,
     .SP2 {
         position: absolute;
@@ -272,14 +254,12 @@ input[type="number"] {
         left: 10%
     }
 
-    .spanSP1,.spanSP2 {
-        font-family: Retropix;
+    .spanSP1,
+    .spanSP2 {
         font-size: 5px;
-        font-weight: bold;
         margin-right: 2px;
-        
     }
-} */
+}
 
 @font-face {
     font-family: Retropix;
