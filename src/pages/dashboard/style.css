@@ -128,7 +128,7 @@
 
 @media (max-width: 768px){
   .grid-container {
-    grid-template-columns: 30vw 30vw;
+    grid-template-columns: 36vw 36vw;
     grid-template-rows: 15vh 15vh 48vh 48vh 48vh 48vh;
   }
 

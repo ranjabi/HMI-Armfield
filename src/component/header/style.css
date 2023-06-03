@@ -7,10 +7,15 @@
         background-color: #1B1949;
     }
 
+    /* .container{
+        height: 100%;
+    } */
+
     .head img{
         margin-left: 5vw;
         margin-top: 0%;
         height: 100%;
+        display: inline;
     }
 
     .nav{
@@ -19,6 +24,9 @@
         float: right;
         padding-right: 4vw;
         height: 100%;
+        display: inline-box;
+        box-sizing: border-box;
+        padding-top: 5px;
         /* padding-top: 0.2%; */
         /* margin-top: 0.4%; */
     }
@@ -42,9 +50,127 @@
         font-weight: 800;
     }
 
-    /* .nav li button{
-        width: 50px;
-        height: 30px;
-        background-color: #c0392b;
-    } */
-    
+    .hamBox{
+        cursor: pointer;
+    }
+
+    .navOverlay{
+        position: fixed;
+        background: #1B1949;
+        z-index: 4;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+@media (max-width: 768px){
+    .hamBox{
+        position: relative;
+        width: 44px;
+        height: 44px;
+        cursor: pointer;
+        border-radius: 50%;
+        transition: 0.3 ease;
+        margin: 0.3em;
+        margin-top: 0.6em;
+        margin-right: 0.6em;
+        display: block;
+        z-index: 5;
+    }
+
+    .hamBox:hover{
+        background: #161345;
+    }
+
+    .hamBoxOpen{
+        background: #1B1949
+    }
+
+    .line{
+        margin: 0 auto;
+        position: absolute;
+        display: block;
+        width: 20px;
+        height: 2px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.5);
+        left: 0;
+        right: 0;
+        transform: rotate(0deg);
+        transition: all 0.4s;
+    }
+
+    .line1{
+        top: 0.8em;
+    }
+
+    .line2{
+        top: 1.3em;
+    }
+
+    .line3{
+        top: 1.8em;
+    }
+
+    .line1spin{
+        top: 1.3em;
+        transform: rotate(135deg);
+        background: #fff;
+    }
+
+    .line2spin{
+        display: none;
+    }
+
+    .line3spin{
+        top: 1.3em;
+        transform: rotate(45deg);
+        background: #fff;
+    }
+
+    .nav{
+        height: auto;
+        width: auto;
+        padding-top: 0;
+        padding-right: 0;
+    }
+
+    .bigScreen{
+        display: none;
+    }
+
+    .navOverlay{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .navOverlay li{
+        /* display: inline;
+        margin-right: 2.5vw; */
+        list-style: none;
+    }
+
+    .navOverlay li a:hover{
+        font-weight: 800;
+    }
+
+    .navOverlay li a{
+        font-family: 'Poppins';
+        line-height: 27px;
+        font-size: 18px;
+        font-weight: 500;
+        color: white;
+        text-decoration: none;
+    }
+}
+/* .nav li button{
+    width: 50px;
+    height: 30px;
+    background-color: #c0392b;
+} */
