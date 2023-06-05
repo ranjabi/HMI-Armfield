@@ -3,10 +3,10 @@
 h1{
     font-family: 'Poppins';
     font-weight: 500;
-    font-size: 40px;
+    font-size: 32px;
     color: #1B1949;
     margin-top: 0;
-    padding-top: 12vh;
+    padding-top: 14vh;
     margin-left: 5vw;
 }
 
@@ -26,7 +26,7 @@ table {
     background: #FFFFFF;
     border: 1px solid #B6B6BB;
     border-radius: 4px;
-    width: 1250px;
+    width: 900px;
     height: 200px;
     border-spacing: 0;
 }
@@ -38,9 +38,9 @@ th {
     border-width: 1px 0px 0px 1px;
     border-style: solid;
     border-color: white;
-    padding: 8px;
+    padding: 5px;
     color: white;
-    font-size: 14px;
+    font-size: 10px;
     font-style: normal;
     font-weight: 500;
     /* border-spacing: 0px; */
@@ -50,7 +50,7 @@ th {
 td {
     /* align-self: stretch; */
     color: black;
-    font-size: 12px;
+    font-size: 10px;
     font-style: normal;
     font-weight: 500;
     background: #E9E9EF;

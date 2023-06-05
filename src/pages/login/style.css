@@ -16,7 +16,7 @@
 .form{
     position: absolute;
     width: 45vw;
-    height: 100%;
+    height: 99.6%;
     right: 0;
     top: 0px;
 
@@ -32,21 +32,21 @@
 h3{
     font-family: 'Poppins';
     font-weight: 500;
-    font-size: 32px;
+    font-size: 28px;
     position: absolute;
-    margin-top: 24vh;
+    margin-top: 14vh;
     left: 9vw;
 }
 
 .login-form {
     position: absolute;
     width: 50%;
-    margin-top: 36vh;
+    margin-top: 28vh;
     left: 9vw;
   }
   
   .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 5%;
   }
   
   label {
@@ -54,13 +54,13 @@ h3{
     font-weight: 500;
     font-size: 15px;
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 2%;
   }
   
   input[type="text"],
   input[type="password"] {
     width: 100%;
-    height: 30px;
+    height: 6vh;
     padding: 8px;
     border-radius: 4px;
     border: 1px solid #ccc;
@@ -73,10 +73,10 @@ h3{
   }
 
   .btn-login {
-    margin-top: 25px;
+    margin-top: 10%;
     display: block;
     width: 106%;
-    height: 50px;
+    height: 10vh;
     padding: 10px;
     border: none;
     border-radius: 4px;
@@ -85,7 +85,7 @@ h3{
     cursor: pointer;
     font-family: 'Poppins';
     font-weight: 500;
-    font-size: 20px;
+    font-size: 16px;
 
   }
   
@@ -96,7 +96,7 @@ h3{
   h4{
     font-family: 'Poppins';
     font-weight: 500;
-    font-size: 14px;
+    font-size: 11px;
     color: #004EDA;
   }
   

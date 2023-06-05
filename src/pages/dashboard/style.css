@@ -62,20 +62,22 @@
   .item .graphttl{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     height: 10vh;
   }
 
   .item .imgbox {
-    /* position: absolute; */
+    /* position: relative; */
+    float: right;
     display: inline;
     margin-top: 3vh;
-    padding-right: 0;
+    right: 0;
   }
 
   .item .imgbox img{
     margin-right: 0.9vw;
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
   }
 
   .item .graphic{
@@ -87,29 +89,28 @@
   .item h6{
     /* position: absolute; */
     margin-top: 3vh;
-    margin-left: 9vw;
-    margin-right: 3.2vw;
+    margin-left: 7vw;
+    margin-right: 1.5vw;
     font-family: 'Poppins';
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     letter-spacing: 0.02em; 
     color: #004EDA;
   }
 
   .item7 h6{
-    margin-left: 15%;
+    margin-left: 10%;
   }
 
   .item8 h6{
-    margin-left: 11vw;
-    margin-right: 7.5vw;
+    margin-left: 12vw;
   }
 
   .item h5{
     height: 0;
     font-family: 'Poppins';
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     letter-spacing: 0.02em;
     color: #5A5A5F;
     margin-top: 2.5vh;
@@ -119,7 +120,7 @@
 .item p{
     font-family: 'Poppins';
     font-weight: 500;
-    font-size: 29px;
+    font-size: 30px;
     letter-spacing: 0.02em; 
     color: #004EDA;
     margin-left: 1vw;
@@ -150,4 +151,5 @@
   .item h5{
     font-size: 13px;
   }
+
 }

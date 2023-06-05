@@ -1,267 +1,53 @@
-.ilustrasi {
-    position: relative;
-    width: 100%;
-    height: 90vh;
+.hami{
+    /* position: relative; */
+    background: #F2F2F8;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
-    top: 115px;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
 }
 
-.ilustrasi > img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+.gambar{
+    /* position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(50%,-50%); */
+    position: relative;
+    height: 70%;
+    width: 40%;
+    margin-top: 100px;
+    background-image: url("../../assets/hmi.png");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
-input[type="number"] {
-    width: 50px;
-    height: 35px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    margin-bottom: 5px;
+.kotak{
+    height: 50%;
+    background-color: aqua;
+    width: 15%;
+    padding: 12px;
 }
 
-.SP1,
-.SP2 {
+.kotak1{
+    width: 100%;
+    height: 50%;
+    background-color: azure;
+}
+.kotak2{
+    width: 100%;
+    height: 50%;
+    background-color:blue;
+}
+
+input[type = "number"]{
+    width: 40px;
+    height: 20px;
+}
+.SP1{
     position: absolute;
-    padding: 10px;
+    margin-left: 20%;
+    margin-top: 10%;
 }
 
-.SP1 {
-    top: 5%;
-    left: 43%;
-}
-
-.SP2 {
-    top: 50%;
-    left: 32.5%;
-}
-
-.spanSP1,
-.spanSP2 {
-    font-family: Retropix;
-    font-size: 20px;
-    font-weight: bold;
-    margin-right: 15px;
-}
-
-/* Membuat tata letak responsif */
-
-@media (max-width: 1440px) {
-    .ilustrasi {
-        height: 90vh;
-        top: 120px;
-    }
-    
-    input[type="number"] {
-        width: 50px;
-        height: 35px;
-        padding: 2px;
-        border-radius: 2px;
-        border: 0.5px solid #ccc;
-        margin-bottom: 2px;
-    }
-    
-    .SP1,
-    .SP2 {
-        position: absolute;
-        transform: translate(-50%, -50%);  
-        font-size: 15px;
-        top: 30%;
-        width: 1200px;
-        height: 7px;
-        /* padding: 5px; */
-    }
-
-    .SP1 {
-        top: 5%;
-        left: 46.5%;
-    }
-
-    .SP2 {
-        top: 51.5%;
-        left: 30%;
-    }
-
-    .spanSP1,
-    .spanSP2 {
-        font-size: 20px;
-        margin-right: 2px;
-    }
-}
-
-@media (max-width: 1024px) {
-    .ilustrasi {
-        height: 80vh;
-        top: 150px;
-    }
-
-    input[type="number"] {
-        width: 30px;
-        height: 20px;
-        padding: 2px;
-        border-radius: 2px;
-        border: 0.5px solid #ccc;
-        margin-bottom: 2px;
-    }
-
-    .SP1,
-    .SP2 {
-        position: absolute;
-        transform: translate(-50%, -50%);  
-        font-size: 15px;
-        top: 30%;
-        width: 100px;
-        height: 7px;
-        padding: 5px;
-    }
-
-    .SP1 {
-        top: 7%;
-        left: 46%;
-    }
-
-    .SP2 {
-        top: 53%;
-        left: 29.5%;
-    }
-
-    .spanSP1,
-    .spanSP2 {
-        font-size: 15px;
-        margin-right: 2px;
-    }
-}
-
-@media (max-width: 768px) {
-    .ilustrasi {
-        height: 70vh;
-        top: 150px;
-    }
-
-    input[type="number"] {
-        width: 25px;
-        height: 15px;
-        padding: 2px;
-        border-radius: 2px;
-        border: 0.5px solid #ccc;
-        margin-bottom: 2px;
-    }
-
-    .SP1,
-    .SP2 {
-        position: absolute;
-        transform: translate(-50%, -50%);  
-        font-size: 15px;
-        top: 30%;
-        width: 100px;
-        height: 7px;
-        padding: 5px;
-    }
-
-    .SP1 {
-        top: 7%;
-        left: 46%;
-    }
-
-    .SP2 {
-        top: 51.5%;
-        left: 27%;
-    }
-
-    .spanSP1,
-    .spanSP2 {
-        font-size: 15px;
-        margin-right: 2px;
-    }
-}
-
-@media (max-width: 480px) {
-    .ilustrasi {
-        height: 50vh;
-    }
-
-    input[type="number"] {
-        width: 5px;
-        height: 5px;
-        padding: 2px;
-        border-radius: 2px;
-        border: 0.5px solid #ccc;
-        margin-bottom: 2px;
-    }
-
-    .SP1,
-    .SP2 {
-        position: absolute;
-        transform: translate(-50%, -50%);  
-        font-size: 7px;
-        top: 30%;
-        width: 35px;
-        height: 7px;
-        padding: 5px;
-    }
-
-    .SP1 {
-        top: 9.5%;
-        left: 54.5%;
-    }
-
-    .SP2 {
-        top: 49.5%;
-        left: -100px;
-    }
-
-    .spanSP1,
-    .spanSP2 {
-        font-size: 7px;
-        margin-right: 2px;
-    }
-}
-
-@media (max-width: 375px) {
-    .ilustrasi {
-        height: 50vh;
-    }
-
-    input[type="number"] {
-        width: 3px;
-        height: 3px;
-        padding: 2px;
-        border-radius: 2px;
-        border: 0.5px solid #ccc;
-        margin-bottom: 2px;
-    }
-
-    .SP1,
-    .SP2 {
-        position: absolute;
-        font-size: 4px;
-        top: 30%;
-        width: 25px;
-        height: 7px;
-        padding: 5px;
-    }
-
-    .SP1 {
-        top: 23%;
-        left: 54%;
-    }
-
-    .SP2 {
-        top: 22%;
-        left: 10%
-    }
-
-    .spanSP1,
-    .spanSP2 {
-        font-size: 5px;
-        margin-right: 2px;
-    }
-}
-
-@font-face {
-    font-family: Retropix;
-    src: local(Retropix), url(../../assets/retropix.otf);
-}
