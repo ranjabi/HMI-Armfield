@@ -14,17 +14,34 @@ const LineChart = ({ data }) => {
     const ctx = chartRef.current.getContext('2d');
 
     // Inisialisasi chart
+    // const chart = new Chart(ctx, {
+    //   type: "line",
+    //   data: data,
+    //   options: {
+    //     plugins: {
+    //       legend: {
+    //         // display: false,
+    //         position: 'bottom',
+            
+    //       },           
+    //     }
+    //    }
+    // });
     const chart = new Chart(ctx, {
       type: "line",
       data: data,
       options: {
         plugins: {
           legend: {
-            // display: false,
+            display: true,
             position: 'bottom',
-          },           
-        }
-       }
+            labels: {
+              usePointStyle: true, // Use point-style legends
+              pointStyle: 'circle', // Set legend shape to circle
+            },
+          },
+        },
+      },
     });
 
     return () => {
