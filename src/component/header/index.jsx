@@ -13,13 +13,13 @@ const Header = () => {
     e.preventDefault();
     const token = localStorage.getItem("access_token");
     console.log(token);
-    const authorization = { Authorization: "Bearer " + token };
-    console.log(authorization);
+    // const authorization = Authorization: "Bearer " + token ;
     try {
       await axios.post("http://localhost/armfield/public/api/logout", null, {
         headers: {
-          "Content-type": "application/json",
-          authorization,
+          Accept: "application/json",
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + token, //Add this line
         },
       });
       localStorage.removeItem("access_token");
