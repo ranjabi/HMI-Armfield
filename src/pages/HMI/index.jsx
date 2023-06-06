@@ -1,6 +1,6 @@
 import Header from "../../component/header";
 import "./style.css"
-
+import HW from "../../assets/Heater Water.jpg"
 const HMI = () => {
     return (
         <>
@@ -8,10 +8,27 @@ const HMI = () => {
             <div className="hami">
                 <div className="kotak">
                     <div className="kotak1">
-
+                        <p>Sample Data</p>
+                        <div className="time_sampling">
+                            <span className="spanTS">Time Sampling</span>
+                            <p> 2</p>
+                        </div>
+                        <div className="current_time">
+                            <span className="spanCT">Current Time</span>
+                            <p> 14:05:07</p>
+                        </div>
                     </div>
                     <div className="kotak2">
-                        
+                        <p>Water Heater</p>
+                        <img src={HW} alt="" />
+                        <div className="actual_output">
+                            <span className="spanAO">Actual Output</span>
+                            <p> 0.00 kW</p>
+                        </div>
+                        <div className="heater_output">
+                            <span className="spanHO">Heater Output</span>
+                            <p> 0</p>
+                        </div>
                     </div>
                 </div>
                 <div className="gambar">
