@@ -66,6 +66,22 @@
         transition: all 2s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
+    button{
+        border: none;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        cursor: pointer;
+        outline: none;
+        font-family: 'Poppins';
+        font-size: 16px;
+        font-weight: 500;
+        color: white;
+    }
+
+    button:hover{
+        font-weight: 800;
+    }
 @media (max-width: 768px){
     .hamBox{
         position: relative;
