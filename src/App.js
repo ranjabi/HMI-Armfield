@@ -11,8 +11,8 @@ function App() {
   return (
     <HashRouter>
       <Routes>
-        <Route exact path="/" element={<Login />} />
-        <Route exact path="/dashboard" element={<Dashboard />} />
+        {/* <Route exact path="/" element={<Login />} /> */}
+        <Route exact path="/" element={<Dashboard />} />
         <Route exact path="/hmi" element={<HMI />} />
         <Route exact path="/database" element={<Database />} />
         <Route exact path="/profile" element={<Profile />} />

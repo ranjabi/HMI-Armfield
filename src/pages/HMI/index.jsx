@@ -16,6 +16,8 @@ const HMI = () => {
                 </div>
                 <div className="gambar">
                     <input type="number" id = "SP1" className="SP1" />
+                    <span>T1</span>
+                    <p>0</p>
                 </div>
             </div>
         </>
