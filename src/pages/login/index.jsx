@@ -2,25 +2,18 @@ import "./style.css";
 import BG from "../../assets/bglog.svg";
 import { useRef, useState } from "react";
 import { useEffect } from "react";
-import AuthContext from "../../context/AuthProvider";
-import { useContext } from "react";
 import axios from "axios";
-import { Route } from "react-router-dom";
-import Dashboard from "../dashboard";
 import { useNavigate } from "react-router-dom";
 
-const LOGIN_URL = "/login";
-
 const Login = () => {
-  const { setAuth, auth } = useContext(AuthContext);
   const userRef = useRef();
   const errRef = useRef();
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errMsg, setErrMsg] = useState("");
-  const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [success, setSucess] = useState(true);
 
   // useEffect(() => {
   //   userRef.current.focus();
@@ -49,22 +42,22 @@ const Login = () => {
           },
         }
       );
-      console.log(response?.data?.data?.acess_token);
       const access_token = response?.data?.data?.acess_token;
       const id = response?.data?.data?.user?.id;
       const name = response?.data?.data?.user?.name;
       const role = response?.data?.data?.user?.role;
+      const email = response?.data?.data?.user?.email;
       localStorage.setItem("access_token", access_token);
       localStorage.setItem("id", id);
       localStorage.setItem("name", name);
       localStorage.setItem("role", role);
+      localStorage.setItem("email", email);
       setUsername("");
       setPassword("");
-      setSuccess(true);
-      navigate("/dashboard");
-      console.log(AuthContext);
+      navigate("/");
     } catch (error) {
       console.log(error);
+      setSucess(false);
     } finally {
       setLoading(false);
     }

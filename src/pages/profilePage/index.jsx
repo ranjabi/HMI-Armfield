@@ -4,6 +4,7 @@ import blank from "../../assets/blank_pic.png";
 
 const Profile = () => {
   const username = localStorage.getItem("name");
+  const email = localStorage.getItem("email");
   return (
     <>
       <Header />
@@ -19,7 +20,7 @@ const Profile = () => {
             </div>
             <div className="flex">
               <h6>Email</h6>
-              <p>blablabla@gmail.com</p>
+              <p>{email}</p>
             </div>
           </div>
           <div className="prof-button">
