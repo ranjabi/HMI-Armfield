@@ -1,5 +1,6 @@
 import "./style.css";
 import BG from "../../assets/bglog.svg";
+import warn from "../../assets/cross.png"
 import { useRef, useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
@@ -69,6 +70,12 @@ const Login = () => {
         <img src={BG} />
         <div className="form">
           <div className="formteks">
+          {!success ? (
+              <div className="err">
+                <img src={warn} alt="" />
+                <p>Wrong username and password</p>
+              </div>
+            ) : null}
             <h3>Login</h3>
             <form onSubmit={handleSubmit} className="login-form">
               <div className="form-group">
