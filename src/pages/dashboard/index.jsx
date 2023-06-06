@@ -5,8 +5,28 @@ import Minus from '../../assets/MinusCircle.svg'
 import Hand from '../../assets/Hand.svg'
 import Plus from '../../assets/PlusCircle.svg'
 import Graph from '../../assets/Chart.svg'
+import LineChart from '../../component/linechart'
 
 const Dashboard = () => {
+    const chartData = {
+        labels: ['0', '1', '2', '3', '4', '5'],
+        datasets: [
+          {
+            label: 'Data Set 1',
+            data: [8, 8, 3, 5, 2, 3],
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 1,
+          },
+          {
+            label: 'Data Set 2',
+            data: [7, 2, 5, 8, 3, 7],
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1,
+          },
+        ],
+      };
     return (
         <>
             <Header />
@@ -38,7 +58,7 @@ const Dashboard = () => {
                                 <img src={Hand}/>
                             </div>
                         </div>   
-                        <img className = 'graphic'src ={Graph}/>  
+                        <LineChart data={chartData}/> 
                     </div>
                     <div className="item item6">
                         <div className="graphttl">
@@ -50,7 +70,7 @@ const Dashboard = () => {
                                 <img src={Hand}/>
                             </div>
                         </div>   
-                        <img className = 'graphic'src ={Graph}/>
+                        <LineChart data={chartData}/>
                     </div>
                     <div className="item item7">
                         <div className="graphttl">
@@ -62,7 +82,7 @@ const Dashboard = () => {
                                 <img src={Hand}/>
                             </div>
                         </div>   
-                        <img className = 'graphic'src ={Graph}/>
+                        <LineChart data={chartData}/>
                     </div>
                     <div className="item item8">
                         <div className="graphttl">
@@ -74,7 +94,7 @@ const Dashboard = () => {
                                 <img src={Hand}/>
                             </div>
                         </div>   
-                        <img className = 'graphic'src ={Graph}/>  
+                        <LineChart data={chartData}/> 
                     </div>
                 </div>
             </div>
