@@ -7,8 +7,8 @@ const HMI = () => {
             <Header/>
             <div className="hami">
                 <div className="kotak">
-                    <div className="kotak1">
-                        <p>Sample Data</p>
+                   <fieldset>
+                        <legend>Sample Data</legend>
                         <div className="time_sampling">
                             <span className="spanTS">Time Sampling</span>
                             <p> 2</p>
@@ -17,9 +17,9 @@ const HMI = () => {
                             <span className="spanCT">Current Time</span>
                             <p> 14:05:07</p>
                         </div>
-                    </div>
-                    <div className="kotak2">
-                        <p>Water Heater</p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Water Heater</legend>
                         <img src={HW} alt="" />
                         <div className="actual_output">
                             <span className="spanAO">Actual Output</span>
@@ -29,7 +29,7 @@ const HMI = () => {
                             <span className="spanHO">Heater Output</span>
                             <p> 0</p>
                         </div>
-                    </div>
+                    </fieldset>
                 </div>
                 <div className="gambar">
                     <div className="SP1">
@@ -49,7 +49,7 @@ const HMI = () => {
                         <p> 0.00°C</p>
                     </div>
                     <div className="T2">
-                        <span className="spanT2">- T2</span>
+                        <span className="spanT2"> T2</span>
                         <p> 0.00°C</p>
                     </div>
                     <div className="T3">

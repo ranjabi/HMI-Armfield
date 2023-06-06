@@ -21,206 +21,200 @@
     background-image: url("../../assets/HMI.svg");
     background-size: contain;
     background-repeat: no-repeat;
+    z-index: 1;
 }
 
 .kotak{
     height: 50%;
-    /* background-color: #6F6F6F; */
-    width: 15%;
-    padding: 5px;
+    background-color: #EFEFEF;
+    width: 12%;
+    padding: 15px;
 }
 
-.kotak1{
-    width: 100%;
+fieldset{
+    position: relative;
+    width: 92%;
     height: 50%;
     background-color: #EFEFEF;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0.5, 0.5);
     border: solid #AAAAAA;
+    z-index: 2;
 }
 
-.kotak1 > p {
+legend{
     font-family: Retropix;
-    font-size: larger;
-    margin-left: 5%;
 }
 
 .time_sampling {
-    position: absolute;
-    /* margin-top: 5%; */
-    margin-left: 50px;
+    /* position: absolute; */
+    margin-top: 12%;
+    margin-left: 1%;
 }
 
 .time_sampling > p {
     font-family: Retropix;
     display: inline;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0.5, 0.5);
 }
 
 .current_time {
-    position: absolute;
-    margin-top: 5%;
-    margin-left: 50px;
+    /* position: absolute; */
+    margin-top: 24%;
+    margin-left: 1%;
 }
 
 .current_time > p {
     font-family: Retropix;
     display: inline;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
-}
-.kotak2{
-    width: 100%;
-    height: 50%;
-    background-color:#EFEFEF;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
-    border: solid #AAAAAA;
-    margin-top: 5px;
-}
-
-.kotak2 > p {
-    font-family: Retropix;
-    font-size: larger;
-    margin-left: 5%;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0.5, 0.5);
 }
 /* .kotak2 > img {} */
 
+fieldset img{
+    margin-left: 1%;
+    height: 40%;
+    width: 80%;
+}
+
 .actual_output {
-    position: absolute;
-    /* margin-top: 1; */
-    margin-left: 50px;
+    /* position: absolute; */
+    margin-top: 8%;
+    margin-left: 1%;
 }
 
 .actual_output > p {
     font-family: Retropix;
     display: inline;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0.5, 0.5);
 }
 
 .heater_output {
-    position: absolute;
-    margin-top: 3%;
-    margin-left: 50px;
+    /* position: absolute; */
+    margin-top: 12%;
+    margin-left: 1%;
 }
 
 .heater_output > p {
     font-family: Retropix;
     display: inline;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0.5, 0.5);
 }
 
 
 
 input[type = "number"]{
-    width: 40px;
-    height: 20px;
+    width: 35px;
+    height: 15px;
 }
 
 .spanSP1,.spanSP2,.spanSP3,.spanT1,.spanT2,.spanT3,.spanT4,.spanN1,.spanF1,.spanL1,.spanC1,.spanTS,.spanCT,.spanAO,.spanHO {
     font-family: Retropix;
-    margin-right: 5px
+    margin-right: 5px;
+    font-size: 14px;
 }
 
 .SP1{
     position: absolute;
-    margin-left: 40%;
+    margin-left: 37%;
     margin-top: 4%;
 }
 
 .SP2{
     position: absolute;
-    margin-left: 34%;
-    margin-top: 33%;
+    margin-left: 31%;
+    margin-top: 32%;
 }
 
 .SP3{
     position: absolute;
-    margin-left: 69%;
-    margin-top: 65%;
+    margin-left: 62%;
+    margin-top: 64%;
     
 }
 
 .T1 {
     position: absolute;
-    margin-left: 43%;
+    margin-left: 39%;
     margin-top: 9%;
 }
 
 .T1 > p {
     font-family: Retropix;
     display: inline;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0.5, 0.5);
 }
 
 .T2 {
     position: absolute;
-    margin-left: 80%;
-    margin-top:65%; 
+    margin-left: 77%;
+    margin-top:64%; 
 }
 .T2 > p {
     font-family: Retropix;
     display: inline;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0.5, 0.5);
 }
 
 .T3{
     position: absolute;
-    margin-left: 24%;
-    margin-top:44%; 
+    margin-left: 20%;
+    margin-top:43%; 
 }
 .T3 > p {
     font-family: Retropix;
     display: inline;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0.5, 0.5);
 }
 
 .T4{
     position: absolute;
-    margin-left: 57%;
-    margin-top:40%; 
+    margin-left: 54%;
+    margin-top:39%; 
 }
 .T4 > p {
     font-family: Retropix;
     display: inline;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0.5, 0.5);
 }
 
 .N1 {
     position: absolute;
-    margin-left: 40%;
-    margin-top: 40%;
+    margin-left: 39%;
+    margin-top: 39%;
     
 }
 .N1 > p {
     font-family: Retropix;
     display: inline;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0.5, 0.5);
 }
 
 .F1{
     position:absolute;
-    margin-left: 57%;
+    margin-left: 54%;
     margin-top: 35%;
 }
 .F1 > p {
     font-family: Retropix;
     display: inline;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0.5, 0.5);
 }
 
 .L1{
     position: absolute;
-    margin-left: 2%;
+    margin-left: 0%;
     margin-top: 33%;
 }
 .L1 > p {
     font-family: Retropix;
     display: inline;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0.5, 0.5);
 }
 
 .C1{
     position: absolute;
-    margin-left: 24%;
-    margin-top: 50%;
+    margin-left: 20%;
+    margin-top: 49%;
 }
 .C1 > p {
     font-family: Retropix;

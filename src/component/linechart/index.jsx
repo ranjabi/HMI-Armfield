@@ -13,20 +13,6 @@ const LineChart = ({ data }) => {
   useEffect(() => {
     const ctx = chartRef.current.getContext('2d');
 
-    // Inisialisasi chart
-    // const chart = new Chart(ctx, {
-    //   type: "line",
-    //   data: data,
-    //   options: {
-    //     plugins: {
-    //       legend: {
-    //         // display: false,
-    //         position: 'bottom',
-            
-    //       },           
-    //     }
-    //    }
-    // });
     const chart = new Chart(ctx, {
       type: "line",
       data: data,
@@ -36,8 +22,8 @@ const LineChart = ({ data }) => {
             display: true,
             position: 'bottom',
             labels: {
-              usePointStyle: true, // Use point-style legends
-              pointStyle: 'circle', // Set legend shape to circle
+              usePointStyle: true, 
+              pointStyle: 'circle', 
             },
           },
         },
@@ -45,7 +31,6 @@ const LineChart = ({ data }) => {
     });
 
     return () => {
-      // Hapus chart saat komponen dibongkar
       chart.destroy();
     };
   }, [data]);

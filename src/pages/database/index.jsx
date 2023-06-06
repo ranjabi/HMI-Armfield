@@ -20,6 +20,7 @@ const Database = () => {
             f10: 'Anom',
             f11: 'Anom',
             f12: 'Anom',
+            f13: 'Anom',
         },{
             id: 2,
             f1: 'Totok',
@@ -34,6 +35,7 @@ const Database = () => {
             f10: 'Totok',
             f11: 'Totok',
             f12: 'Totok',
+            f13: 'Totok',
         },{
             id: 3,
             f1: 'yono',
@@ -48,6 +50,7 @@ const Database = () => {
             f10: 'yono',
             f11: 'yono',
             f12: 'yono',
+            f13: 'yono',
         }
     ])
     return (
@@ -67,6 +70,7 @@ const Database = () => {
                         <th>Pump N2 (%)</th>
                         <th>Set Point T1</th>
                         <th>Set Point T2</th>
+                        <th>Set Point T3</th>
                         <th>Valve<br/>Tank A</th>
                         <th>Timestamp</th>
                     </tr>
@@ -85,6 +89,7 @@ const Database = () => {
                                 <td>{row.f10}</td>
                                 <td>{row.f11}</td>
                                 <td>{row.f12}</td>
+                                <td>{row.f13}</td>
                             </tr>
                         ))}
                     </tbody>
