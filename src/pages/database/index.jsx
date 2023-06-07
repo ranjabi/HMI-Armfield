@@ -1,14 +1,11 @@
-import React, { useState } from "react";
-
+import React, { useState, useEffect } from "react";
 import Header from "../../component/header";
 import "./style.css";
 import axios from "axios";
-import { useEffect } from "react";
 
 const Database = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(1);
-  // const[currentData, setCurrentData] = useState([]);
+  const [totalPages, setTotalPages] = useState(8);
   const [data, setData] = useState([]);
 
   const getData = async (page) => {
@@ -41,16 +38,36 @@ const Database = () => {
   const renderPage = () => {
     const pageNumbers = [];
     for (let i = 1; i <= totalPages; i++) {
-      pageNumbers.push(
-        <li
-          key={i}
-          className={currentPage === i ? "active" : ""}
-          onClick={() => handlePageChange(i)}
-        >
-          {" "}
-          {i}
-        </li>
-      );
+      if(totalPages < 5){
+        pageNumbers.push(
+          <li
+            key={i}
+            className={currentPage === i ? "active" : ""}
+            onClick={() => handlePageChange(i)}
+          >
+            {i}
+          </li>
+        );
+      }else{
+        if(i<5 || i == totalPages){
+          pageNumbers.push(
+            <li
+              key={i}
+              className={currentPage === i ? "active" : ""}
+              onClick={() => handlePageChange(i)}
+            >
+              {i}
+            </li>
+          );
+        }else if(i == 5){
+          pageNumbers.push(
+            <li>
+              ...
+            </li>
+          )
+        }
+      }
+      
     }
     return pageNumbers;
   };
@@ -124,19 +141,17 @@ const Database = () => {
             ))}
           </tbody>
           <ul className="pagination">
-            <li
+            {!currentPage === 1? (<li
               onClick={() => handlePageChange(currentPage - 1)}
-              disabled={currentPage === 1}
             >
-              {"<"}
-            </li>
+            {"<"}
+            </li>): null}
             {renderPage()}
-            <li
+            {!currentPage === totalPages? (<li
               onClick={() => handlePageChange(currentPage + 1)}
-              disabled={currentPage === totalPages}
             >
-              {">"}
-            </li>
+            {">"}
+            </li>): null}
           </ul>
         </table>
       </div>
