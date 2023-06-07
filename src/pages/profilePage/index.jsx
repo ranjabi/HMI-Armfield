@@ -23,11 +23,6 @@ const Profile = () => {
               <p>{email}</p>
             </div>
           </div>
-          <div className="prof-button">
-            <button type="submit" className="btn-edit">
-              Edit Profile
-            </button>
-          </div>
         </div>
       </div>
     </>

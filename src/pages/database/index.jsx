@@ -14,7 +14,7 @@ const Database = () => {
         "http://localhost/armfield/public/api/data-plant?page=" + page,
         {
           params: {
-            limit: 10,
+            limit: 15,
           },
         }
       );
@@ -70,86 +70,88 @@ const Database = () => {
   return (
     <>
       <Header />
-      <h1>Data Plant</h1>
-      <div className="tabel">
-        <table>
-          <tr>
-            <th>
-              Tank A<br />
-              Level L1 <br />
-              (mm)
-            </th>
-            <th>
-              Feed Flow
-              <br />
-              F1 (ml/mm)
-            </th>
-            <th>
-              Holding
-              <br />
-              Temperature T1
-            </th>
-            <th>
-              Heater
-              <br />
-              Temperature T2
-            </th>
-            <th>
-              Heated Feed
-              <br />
-              Temperature T4
-            </th>
-            <th>
-              Power
-              <br />
-              Heater
-            </th>
-            <th>Pump N1 (%)</th>
-            <th>Pump N2 (%)</th>
-            <th>Set Point T1</th>
-            <th>Set Point T2</th>
-            <th>Set Point T3</th>
-            <th>
-              Valve
-              <br />
-              Tank A
-            </th>
-            <th>Timestamp</th>
-          </tr>
-          <tbody>
-            {data.map((row) => {
-              var dateFormat = new Date(row.created_at);
-              var date =
-                dateFormat.getDate() +
-                "/" +
-                (dateFormat.getMonth() + 1) +
-                "/" +
-                dateFormat.getFullYear() +
-                " " +
-                dateFormat.getHours() +
-                ":" +
-                dateFormat.getMinutes() +
-                ":" +
-                dateFormat.getSeconds();
-              return (
-                <tr key={row.id}>
-                  <td>{row.tank_a}</td>
-                  <td>{row.feed_flow_f1}</td>
-                  <td>{row.holding_t1}</td>
-                  <td>{row.heater_t2}</td>
-                  <td>{row.heated_feed_t4}</td>
-                  <td>{row.power_heater}</td>
-                  <td>{row.pump_n1}</td>
-                  <td>{row.pump_n2}</td>
-                  <td>{row.set_point_t1}</td>
-                  <td>{row.set_point_t2}</td>
-                  <td>{row.set_point_t3}</td>
-                  <td>{row.valve_tank_a}</td>
-                  <td>{date}</td>
-                </tr>
-              );
-            })}
-          </tbody>
+      <div className="database">
+        <h1>Data Plant</h1>
+        <div className="tabel">
+          <table>
+            <tr>
+              <th>
+                Tank A <br />
+                Level L1 <br />
+                (mm)
+              </th>
+              <th>
+                Feed Flow
+                <br />
+                F1 (ml/mm)
+              </th>
+              <th>
+                Holding
+                <br />
+                Temperature T1
+              </th>
+              <th>
+                Heater
+                <br />
+                Temperature T2
+              </th>
+              <th>
+                Heated Feed
+                <br />
+                Temperature T4
+              </th>
+              <th>
+                Power
+                <br />
+                Heater
+              </th>
+              <th>Pump N1 (%)</th>
+              <th>Pump N2 (%)</th>
+              <th>Set Point T1</th>
+              <th>Set Point T2</th>
+              <th>Set Point T3</th>
+              <th>
+                Valve
+                <br />
+                Tank A
+              </th>
+              <th>Timestamp</th>
+            </tr>
+            <tbody>
+              {data.map((row) => {
+                var dateFormat = new Date(row.created_at);
+                var date =
+                  dateFormat.getDate() +
+                  "/" +
+                  (dateFormat.getMonth() + 1) +
+                  "/" +
+                  dateFormat.getFullYear() +
+                  " " +
+                  dateFormat.getHours() +
+                  ":" +
+                  dateFormat.getMinutes() +
+                  ":" +
+                  dateFormat.getSeconds();
+                return (
+                  <tr key={row.id}>
+                    <td>{row.tank_a}</td>
+                    <td>{row.feed_flow_f1}</td>
+                    <td>{row.holding_t1}</td>
+                    <td>{row.heater_t2}</td>
+                    <td>{row.heated_feed_t4}</td>
+                    <td>{row.power_heater}</td>
+                    <td>{row.pump_n1}</td>
+                    <td>{row.pump_n2}</td>
+                    <td>{row.set_point_t1}</td>
+                    <td>{row.set_point_t2}</td>
+                    <td>{row.set_point_t3}</td>
+                    <td>{row.valve_tank_a}</td>
+                    <td>{date}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
           <ul className="pagination">
             <li
               className={currentPage > 1 ? " " : "hidden"}
@@ -165,7 +167,7 @@ const Database = () => {
               {">"}
             </li>
           </ul>
-        </table>
+        </div>
       </div>
     </>
   );
