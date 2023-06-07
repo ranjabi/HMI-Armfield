@@ -7,6 +7,8 @@ import { useEffect } from "react";
 
 const Database = () => {
   const [currentPage, setCurrentPage] = useState(1);
+  const[totalPages, setTotalPages] = useState(1);
+  // const[currentData, setCurrentData] = useState([]);
   const [data, setData] = useState([]);
 
   const getData = async () => {
@@ -29,6 +31,26 @@ const Database = () => {
   useEffect(() => {
     getData();
   }, []);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+    getData();
+  };
+
+  const renderPage = () => {
+    const pageNumbers = [];
+    for (let i = 1; i<=totalPages; i++){
+      pageNumbers.push(
+        <li
+          key={i}
+          className={currentPage === i ? "active" : ""}
+          onClick={() => handlePageChange(i)}
+        > {i}
+        </li>
+      );
+    }
+    return pageNumbers;
+  }
 
   return (
     <>
@@ -98,48 +120,21 @@ const Database = () => {
               </tr>
             ))}
           </tbody>
-          {/* <tr>
-                        <td>Anom</td>
-                        <td>19</td>
-                        <td>Male</td>
-                        <td>Anom</td>
-                        <td>19</td>
-                        <td>Male</td>
-                        <td>Anom</td>
-                        <td>19</td>
-                        <td>Male</td>
-                        <td>Anom</td>
-                        <td>19</td>
-                        <td>Male</td>
-                    </tr>
-                    <tr>
-                        <td>Megha</td>
-                        <td>19</td>
-                        <td>Female</td>
-                        <td>Megha</td>
-                        <td>19</td>
-                        <td>Female</td>
-                        <td>Megha</td>
-                        <td>19</td>
-                        <td>Female</td>
-                        <td>Megha</td>
-                        <td>19</td>
-                        <td>Female</td>
-                    </tr>
-                    <tr>
-                        <td>Subham</td>
-                        <td>25</td>
-                        <td>Male</td>
-                        <td>Subham</td>
-                        <td>25</td>
-                        <td>Male</td>
-                        <td>Subham</td>
-                        <td>25</td>
-                        <td>Male</td>
-                        <td>Subham</td>
-                        <td>25</td>
-                        <td>Male</td>
-                    </tr> */}
+          <ul className="pagination">
+            <li
+              onClick={() => handlePageChange(currentPage - 1)}
+              disabled={currentPage === 1}
+            >
+              {"<"}
+            </li>
+            {renderPage()}
+            <li
+              onClick={() => handlePageChange(currentPage + 1)}
+              disabled={currentPage === totalPages}
+            >
+              {">"}
+            </li>
+          </ul>
         </table>
       </div>
     </>
