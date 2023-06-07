@@ -3,6 +3,7 @@ import "./style.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { Url } from "../../api/url";
 
 const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
@@ -15,7 +16,7 @@ const Header = () => {
     console.log(token);
     // const authorization = Authorization: "Bearer " + token ;
     try {
-      await axios.post("http://localhost/armfield/public/api/logout", null, {
+      await axios.post(Url("logout"), null, {
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",

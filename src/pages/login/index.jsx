@@ -5,6 +5,7 @@ import { useRef, useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { Url } from "../../api/url";
 
 const Login = () => {
   const userRef = useRef();
@@ -15,10 +16,6 @@ const Login = () => {
   const [errMsg, setErrMsg] = useState("");
   const [loading, setLoading] = useState(false);
   const [success, setSucess] = useState(true);
-
-  // useEffect(() => {
-  //   userRef.current.focus();
-  // });
 
   useEffect(() => {
     setErrMsg("");
@@ -32,7 +29,7 @@ const Login = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost/armfield/public/api/login",
+        Url("login"),
         {
           name: username,
           password: password,

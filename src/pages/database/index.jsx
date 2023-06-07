@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Header from "../../component/header";
 import "./style.css";
 import axios from "axios";
+import { Url } from "../../api/url";
 
 const Database = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -11,7 +12,7 @@ const Database = () => {
   const getData = async (page) => {
     try {
       const response = await axios.get(
-        "http://localhost/armfield/public/api/data-plant?page=" + page,
+        Url("data-plant?page=" + page),
         {
           params: {
             limit: 15,

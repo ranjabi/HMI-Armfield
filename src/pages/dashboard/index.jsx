@@ -8,6 +8,7 @@ import Graph from "../../assets/Chart.svg";
 import LineChart from "../../component/linechart";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Url } from "../../api/url";
 
 const Dashboard = () => {
   const [meanTankA, setMeanTankA] = useState(0);
@@ -26,7 +27,7 @@ const Dashboard = () => {
   const getData = async () => {
     try {
       const response = await axios.get(
-        "http://localhost/armfield/public/api/data-plant-all"
+        Url("data-plant-all")
       );
       let data = response.data?.data;
       let sumTankA = 0;
@@ -99,15 +100,15 @@ const Dashboard = () => {
       {
         label: "Set Point",
         data: setPointT1,
-        backgroundColor: "rgba(255, 99, 132, 0.2)",
-        borderColor: "rgba(255, 99, 132, 1)",
+        backgroundColor: "#71589F",
+        borderColor: "#71589F",
         borderWidth: 1,
       },
       {
         label: "T1",
         data: holdingT1,
-        backgroundColor: "rgba(54, 162, 235, 0.2)",
-        borderColor: "rgba(54, 162, 235, 1)",
+        backgroundColor: "#E0712F",
+        borderColor: "#E0712F",
         borderWidth: 1,
       },
     ],
@@ -119,15 +120,15 @@ const Dashboard = () => {
       {
         label: "Set Point",
         data: setPointT2,
-        backgroundColor: "rgba(255, 99, 132, 0.2)",
-        borderColor: "rgba(255, 99, 132, 1)",
+        backgroundColor: "#71589F",
+        borderColor: "#71589F",
         borderWidth: 1,
       },
       {
         label: "T2",
         data: heaterT2,
-        backgroundColor: "rgba(54, 162, 235, 0.2)",
-        borderColor: "rgba(54, 162, 235, 1)",
+        backgroundColor: "#E0712F",
+        borderColor: "#E0712F",
         borderWidth: 1,
       },
     ],
@@ -139,8 +140,8 @@ const Dashboard = () => {
       {
         label: "T4",
         data: heatedT4,
-        backgroundColor: "rgba(255, 99, 132, 0.2)",
-        borderColor: "rgba(255, 99, 132, 1)",
+        backgroundColor: "#71589F",
+        borderColor: "#71589F",
         borderWidth: 1,
       },
     ],
@@ -152,15 +153,15 @@ const Dashboard = () => {
       {
         label: "Set Point T3",
         data: setPointT3,
-        backgroundColor: "rgba(255, 99, 132, 0.2)",
-        borderColor: "rgba(255, 99, 132, 1)",
+        backgroundColor: "#71589F",
+        borderColor: "#71589F",
         borderWidth: 1,
       },
       {
         label: "F1",
         data: feedF1,
-        backgroundColor: "rgba(54, 162, 235, 0.2)",
-        borderColor: "rgba(54, 162, 235, 1)",
+        backgroundColor: "#E0712F",
+        borderColor: "#E0712F",
         borderWidth: 1,
       },
     ],
