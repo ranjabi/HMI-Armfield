@@ -7,14 +7,14 @@ import { useEffect } from "react";
 
 const Database = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const[totalPages, setTotalPages] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
   // const[currentData, setCurrentData] = useState([]);
   const [data, setData] = useState([]);
 
-  const getData = async () => {
+  const getData = async (page) => {
     try {
       const response = await axios.get(
-        "http://localhost/armfield/public/api/data-plant?page=" + currentPage,
+        "http://localhost/armfield/public/api/data-plant?page=" + page,
         {
           params: {
             limit: 10,
@@ -22,35 +22,38 @@ const Database = () => {
         }
       );
       //   console.log(response.data?.data?.data);
-      return setData(response.data?.data?.data);
+      setTotalPages(response.data?.data?.last_page);
+      setData(response.data?.data?.data);
     } catch (error) {
       console.log(error);
     }
   };
 
   useEffect(() => {
-    getData();
+    getData(1);
   }, []);
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
-    getData();
+    getData(page);
   };
 
   const renderPage = () => {
     const pageNumbers = [];
-    for (let i = 1; i<=totalPages; i++){
+    for (let i = 1; i <= totalPages; i++) {
       pageNumbers.push(
         <li
           key={i}
           className={currentPage === i ? "active" : ""}
           onClick={() => handlePageChange(i)}
-        > {i}
+        >
+          {" "}
+          {i}
         </li>
       );
     }
     return pageNumbers;
-  }
+  };
 
   return (
     <>
