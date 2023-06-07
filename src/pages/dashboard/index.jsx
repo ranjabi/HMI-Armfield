@@ -1,20 +1,15 @@
 import Header from "../../component/header";
 import "./style.css";
-import Arrows from "../../assets/ArrowsOut.svg";
-import Minus from "../../assets/MinusCircle.svg";
-import Hand from "../../assets/Hand.svg";
-import Plus from "../../assets/PlusCircle.svg";
-import Graph from "../../assets/Chart.svg";
 import LineChart from "../../component/linechart";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Url } from "../../api/url";
 
 const Dashboard = () => {
-  const [meanTankA, setMeanTankA] = useState(0);
-  const [meanPump1, setMeanPump1] = useState(0);
-  const [meanPump2, setMeanPump2] = useState(0);
-  const [meanHeater, setMeanHeater] = useState(0);
+  const [TankA, setTankA] = useState(0);
+  const [Pump1, setPump1] = useState(0);
+  const [Pump2, setPump2] = useState(0);
+  const [Heater, setHeater] = useState(0);
   const [timestamp, setTimestamp] = useState([]);
   const [setPointT1, setSetPointT1] = useState([]);
   const [holdingT1, setHoldingT1] = useState([]);
@@ -30,10 +25,11 @@ const Dashboard = () => {
         Url("data-plant-all")
       );
       let data = response.data?.data;
-      let sumTankA = 0;
-      let sumPump1 = 0;
-      let sumPump2 = 0;
-      let sumHeater = 0;
+      let tankA = 0;
+      let pump1 = 0;
+      let pump2 = 0;
+      let heater = 0;
+      let count = 0;
 
       let tempTime = [];
       let tempSetPointT1 = [];
@@ -53,10 +49,13 @@ const Dashboard = () => {
         tempSetPointT3.push(e.set_point_t3);
         tempFeedF1.push(e.feed_flow_f1);
 
-        sumTankA = sumTankA + e.tank_a;
-        sumPump1 = sumPump1 + e.pump_n1;
-        sumPump2 = sumPump2 + e.pump_n2;
-        sumHeater = sumHeater + e.power_heater;
+        count++;
+        if(count == data.length){
+          tankA = e.tank_a;
+          pump1 = e.pump_n1;
+          pump2 = e.pump_n2;
+          heater = e.power_heater;
+        }
 
         var dateFormat = new Date(e.created_at);
         var date =
@@ -73,10 +72,10 @@ const Dashboard = () => {
           dateFormat.getSeconds();
         tempTime.push(date);
       });
-      setMeanTankA(sumTankA / data.length);
-      setMeanPump1(sumPump1 / data.length);
-      setMeanPump2(sumPump2 / data.length);
-      setMeanHeater(sumHeater / data.length);
+      setTankA(tankA);
+      setPump1(pump1);
+      setPump2(pump2);
+      setHeater(heater);
       setTimestamp(tempTime);
       setSetPointT1(tempSetPointT1);
       setHoldingT1(tempHoldingT1);
@@ -151,7 +150,7 @@ const Dashboard = () => {
     labels: timestamp,
     datasets: [
       {
-        label: "Set Point T3",
+        label: "Set Point",
         data: setPointT3,
         backgroundColor: "#71589F",
         borderColor: "#71589F",
@@ -173,19 +172,19 @@ const Dashboard = () => {
         <div className="grid-container">
           <div className="item">
             <h5>Level Tank A (mm)</h5>
-            <p>{meanTankA}</p>
+            <p>{TankA}</p>
           </div>
           <div className="item">
             <h5>Pump N1 (%)</h5>
-            <p>{meanPump1}</p>
+            <p>{Pump1}</p>
           </div>
           <div className="item">
             <h5>Pump N2 (%)</h5>
-            <p>{meanPump2}</p>
+            <p>{Pump2}</p>
           </div>
           <div className="item">
             <h5>Heater Power (Kwh)</h5>
-            <p>{meanHeater}</p>
+            <p>{Heater}</p>
           </div>
           <div className="item item5">
             <div className="graphttl">

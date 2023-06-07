@@ -15,7 +15,7 @@ const Database = () => {
         Url("data-plant?page=" + page),
         {
           params: {
-            limit: 15,
+            limit: 12,
           },
         }
       );
