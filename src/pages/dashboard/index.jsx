@@ -17,6 +17,11 @@ const Dashboard = () => {
   const [timestamp, setTimestamp] = useState([]);
   const [setPointT1, setSetPointT1] = useState([]);
   const [holdingT1, setHoldingT1] = useState([]);
+  const [setPointT2, setSetPointT2] = useState([]);
+  const [heaterT2, setHeaterT2] = useState([]);
+  const [heatedT4, setHeatedT4] = useState([]);
+  const [setPointT3, setSetPointT3] = useState([]);
+  const [feedF1, setFeedF1] = useState([]);
 
   const getData = async () => {
     try {
@@ -32,9 +37,20 @@ const Dashboard = () => {
       let tempTime = [];
       let tempSetPointT1 = [];
       let tempHoldingT1 = [];
+      let tempSetPointT2 = [];
+      let tempHeaterT2 = [];
+      let tempHeatedT4 = [];
+      let tempSetPointT3 = [];
+      let tempFeedF1 = [];
+
       data.forEach((e) => {
         tempSetPointT1.push(e.set_point_t1);
         tempHoldingT1.push(e.holding_t1);
+        tempSetPointT2.push(e.set_point_t2);
+        tempHeaterT2.push(e.heater_t2);
+        tempHeatedT4.push(e.heated_feed_t4);
+        tempSetPointT3.push(e.set_point_t3);
+        tempFeedF1.push(e.feed_flow_f1);
 
         sumTankA = sumTankA + e.tank_a;
         sumPump1 = sumPump1 + e.pump_n1;
@@ -63,6 +79,11 @@ const Dashboard = () => {
       setTimestamp(tempTime);
       setSetPointT1(tempSetPointT1);
       setHoldingT1(tempHoldingT1);
+      setSetPointT2(tempSetPointT2);
+      setHeaterT2(tempHeaterT2);
+      setHeatedT4(tempHeatedT4);
+      setSetPointT3(tempSetPointT3);
+      setFeedF1(tempFeedF1);
     } catch (error) {
       console.log(error);
     }
@@ -85,6 +106,59 @@ const Dashboard = () => {
       {
         label: "T1",
         data: holdingT1,
+        backgroundColor: "rgba(54, 162, 235, 0.2)",
+        borderColor: "rgba(54, 162, 235, 1)",
+        borderWidth: 1,
+      },
+    ],
+  };
+
+  const chartDataTemp2 = {
+    labels: timestamp,
+    datasets: [
+      {
+        label: "Set Point",
+        data: setPointT2,
+        backgroundColor: "rgba(255, 99, 132, 0.2)",
+        borderColor: "rgba(255, 99, 132, 1)",
+        borderWidth: 1,
+      },
+      {
+        label: "T2",
+        data: heaterT2,
+        backgroundColor: "rgba(54, 162, 235, 0.2)",
+        borderColor: "rgba(54, 162, 235, 1)",
+        borderWidth: 1,
+      },
+    ],
+  };
+
+  const chartDataTemp3 = {
+    labels: timestamp,
+    datasets: [
+      {
+        label: "T4",
+        data: heatedT4,
+        backgroundColor: "rgba(255, 99, 132, 0.2)",
+        borderColor: "rgba(255, 99, 132, 1)",
+        borderWidth: 1,
+      },
+    ],
+  };
+
+  const chartDataTemp4 = {
+    labels: timestamp,
+    datasets: [
+      {
+        label: "Set Point T3",
+        data: setPointT3,
+        backgroundColor: "rgba(255, 99, 132, 0.2)",
+        borderColor: "rgba(255, 99, 132, 1)",
+        borderWidth: 1,
+      },
+      {
+        label: "F1",
+        data: feedF1,
         backgroundColor: "rgba(54, 162, 235, 0.2)",
         borderColor: "rgba(54, 162, 235, 1)",
         borderWidth: 1,
@@ -115,50 +189,26 @@ const Dashboard = () => {
           <div className="item item5">
             <div className="graphttl">
               <h6>Holding Temperatur T1</h6>
-              <div className="imgbox">
-                <img src={Arrows} />
-                <img src={Plus} />
-                <img src={Minus} />
-                <img src={Hand} />
-              </div>
             </div>
             <LineChart data={chartDataTemp1} />
           </div>
           <div className="item item6">
             <div className="graphttl">
               <h6>Heater Temperatur T2</h6>
-              <div className="imgbox">
-                <img src={Arrows} />
-                <img src={Plus} />
-                <img src={Minus} />
-                <img src={Hand} />
-              </div>
             </div>
-            <LineChart data={chartDataTemp1} />
+            <LineChart data={chartDataTemp2} />
           </div>
           <div className="item item7">
             <div className="graphttl">
               <h6>Heated Feed Temperatur T4</h6>
-              <div className="imgbox">
-                <img src={Arrows} />
-                <img src={Plus} />
-                <img src={Minus} />
-                <img src={Hand} />
-              </div>
             </div>
-            <LineChart data={chartDataTemp1} />
+            <LineChart data={chartDataTemp3} />
           </div>
           <div className="item item8">
             <div className="graphttl">
               <h6>Feed Flow F1</h6>
-              <div className="imgbox">
-                <img src={Arrows} />
-                <img src={Plus} />
-                <img src={Minus} />
-                <img src={Hand} />
-              </div>
             </div>
-            <LineChart data={chartDataTemp1} />
+            <LineChart data={chartDataTemp4} />
           </div>
         </div>
       </div>
