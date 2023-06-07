@@ -38,7 +38,7 @@ const Database = () => {
   const renderPage = () => {
     const pageNumbers = [];
     for (let i = 1; i <= totalPages; i++) {
-      if(totalPages < 5){
+      if (totalPages < 5) {
         pageNumbers.push(
           <li
             key={i}
@@ -48,8 +48,8 @@ const Database = () => {
             {i}
           </li>
         );
-      }else{
-        if(i<5 || i == totalPages){
+      } else {
+        if (i < 5 || i == totalPages) {
           pageNumbers.push(
             <li
               key={i}
@@ -59,15 +59,10 @@ const Database = () => {
               {i}
             </li>
           );
-        }else if(i == 5){
-          pageNumbers.push(
-            <li>
-              ...
-            </li>
-          )
+        } else if (i == 5) {
+          pageNumbers.push(<li>...</li>);
         }
       }
-      
     }
     return pageNumbers;
   };
@@ -122,36 +117,53 @@ const Database = () => {
             <th>Timestamp</th>
           </tr>
           <tbody>
-            {data.map((row) => (
-              <tr key={row.id}>
-                <td>{row.tank_a}</td>
-                <td>{row.feed_flow_f1}</td>
-                <td>{row.holding_t1}</td>
-                <td>{row.heater_t2}</td>
-                <td>{row.heated_feed_t4}</td>
-                <td>{row.power_heater}</td>
-                <td>{row.pump_n1}</td>
-                <td>{row.pump_n2}</td>
-                <td>{row.set_point_t1}</td>
-                <td>{row.set_point_t2}</td>
-                <td>{row.set_point_t3}</td>
-                <td>{row.valve_tank_a}</td>
-                <td>{row.created_at}</td>
-              </tr>
-            ))}
+            {data.map((row) => {
+              var dateFormat = new Date(row.created_at);
+              var date =
+                dateFormat.getDate() +
+                "/" +
+                (dateFormat.getMonth() + 1) +
+                "/" +
+                dateFormat.getFullYear() +
+                " " +
+                dateFormat.getHours() +
+                ":" +
+                dateFormat.getMinutes() +
+                ":" +
+                dateFormat.getSeconds();
+              return (
+                <tr key={row.id}>
+                  <td>{row.tank_a}</td>
+                  <td>{row.feed_flow_f1}</td>
+                  <td>{row.holding_t1}</td>
+                  <td>{row.heater_t2}</td>
+                  <td>{row.heated_feed_t4}</td>
+                  <td>{row.power_heater}</td>
+                  <td>{row.pump_n1}</td>
+                  <td>{row.pump_n2}</td>
+                  <td>{row.set_point_t1}</td>
+                  <td>{row.set_point_t2}</td>
+                  <td>{row.set_point_t3}</td>
+                  <td>{row.valve_tank_a}</td>
+                  <td>{date}</td>
+                </tr>
+              );
+            })}
           </tbody>
           <ul className="pagination">
-            {!currentPage === 1? (<li
+            <li
+              className={currentPage > 1 ? " " : "hidden"}
               onClick={() => handlePageChange(currentPage - 1)}
             >
-            {"<"}
-            </li>): null}
+              {"<"}
+            </li>
             {renderPage()}
-            {!currentPage === totalPages? (<li
+            <li
+              className={currentPage < totalPages ? " " : "hidden"}
               onClick={() => handlePageChange(currentPage + 1)}
             >
-            {">"}
-            </li>): null}
+              {">"}
+            </li>
           </ul>
         </table>
       </div>

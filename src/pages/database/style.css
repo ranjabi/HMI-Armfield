@@ -78,10 +78,14 @@ td {
 }
 
 .pagination li.active {
-  background-color: #1B1949;
+  background-color: #1b1949;
   color: #fff;
 }
 
 .pagination li:hover {
   background-color: #ccc;
+}
+
+.hidden {
+  display: none;
 }
