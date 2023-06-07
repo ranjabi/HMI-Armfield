@@ -16,7 +16,7 @@ const Dashboard = () => {
   const [setPointT2, setSetPointT2] = useState([]);
   const [heaterT2, setHeaterT2] = useState([]);
   const [heatedT4, setHeatedT4] = useState([]);
-  const [setPointT3, setSetPointT3] = useState([]);
+  const [setPointF1, setSetPointF1] = useState([]);
   const [feedF1, setFeedF1] = useState([]);
 
   const getData = async () => {
@@ -37,7 +37,7 @@ const Dashboard = () => {
       let tempSetPointT2 = [];
       let tempHeaterT2 = [];
       let tempHeatedT4 = [];
-      let tempSetPointT3 = [];
+      let tempSetPointF1 = [];
       let tempFeedF1 = [];
 
       data.forEach((e) => {
@@ -46,7 +46,7 @@ const Dashboard = () => {
         tempSetPointT2.push(e.set_point_t2);
         tempHeaterT2.push(e.heater_t2);
         tempHeatedT4.push(e.heated_feed_t4);
-        tempSetPointT3.push(e.set_point_t3);
+        tempSetPointF1.push(e.set_point_t3);
         tempFeedF1.push(e.feed_flow_f1);
 
         count++;
@@ -82,7 +82,7 @@ const Dashboard = () => {
       setSetPointT2(tempSetPointT2);
       setHeaterT2(tempHeaterT2);
       setHeatedT4(tempHeatedT4);
-      setSetPointT3(tempSetPointT3);
+      setSetPointF1(tempSetPointF1);
       setFeedF1(tempFeedF1);
     } catch (error) {
       console.log(error);
@@ -151,7 +151,7 @@ const Dashboard = () => {
     datasets: [
       {
         label: "Set Point",
-        data: setPointT3,
+        data: setPointF1,
         backgroundColor: "#71589F",
         borderColor: "#71589F",
         borderWidth: 1,

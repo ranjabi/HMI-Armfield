@@ -114,7 +114,7 @@ const Database = () => {
               <th>Pump N2 (%)</th>
               <th>Set Point T1</th>
               <th>Set Point T2</th>
-              <th>Set Point T3</th>
+              <th>Set Point F1</th>
               <th>
                 Valve
                 <br />
