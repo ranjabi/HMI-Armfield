@@ -19,7 +19,7 @@ const Database = () => {
           },
         }
       );
-      //   console.log(response.data?.data?.data);
+      //   console.log();
       setTotalPages(response.data?.data?.last_page);
       setData(response.data?.data?.data);
     } catch (error) {
@@ -36,32 +36,36 @@ const Database = () => {
     getData(page);
   };
 
+  const pushPage = (pageNumbers, i) => {
+    pageNumbers.push(
+      <li
+        key={i}
+        className={currentPage === i ? "active" : ""}
+        onClick={() => handlePageChange(i)}
+      >
+      {i}
+      </li>
+    );
+  }
+
   const renderPage = () => {
     const pageNumbers = [];
     for (let i = 1; i <= totalPages; i++) {
       if (totalPages < 5) {
-        pageNumbers.push(
-          <li
-            key={i}
-            className={currentPage === i ? "active" : ""}
-            onClick={() => handlePageChange(i)}
-          >
-            {i}
-          </li>
-        );
+        pushPage(pageNumbers,i);
       } else {
-        if (i < 5 || i == totalPages) {
-          pageNumbers.push(
-            <li
-              key={i}
-              className={currentPage === i ? "active" : ""}
-              onClick={() => handlePageChange(i)}
-            >
-              {i}
-            </li>
-          );
-        } else if (i == 5) {
-          pageNumbers.push(<li>...</li>);
+        if(currentPage < totalPages - 3){
+          if ((i < currentPage + 3 && i >= currentPage-1)|| i == totalPages) {
+            pushPage(pageNumbers,i);
+          } else if (i == currentPage + 3) {
+            pageNumbers.push(<li>...</li>);
+          }
+        }else{
+          if(i >= totalPages - 3 || i <= totalPages - currentPage + 1 ){
+            pushPage(pageNumbers,i);
+          }else if(i == totalPages - 4){
+            pageNumbers.push(<li>...</li>);
+          }
         }
       }
     }
