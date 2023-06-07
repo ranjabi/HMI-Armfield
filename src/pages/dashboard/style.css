@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;800&display=swap");
 
 /* .recbox{
     padding-top: 15vh;
@@ -17,122 +17,122 @@
     border-radius: 4px;
 } */
 
-.dashbox{
-    background: #F2F2F8;
+.dashbox {
+  background: #f2f2f8;
 }
 
 .grid-container {
-    width: 100%;
-    justify-content: center;
-    padding-top: 100px;
-    display: grid;
-    grid-template-columns: 17vw 17vw 17vw 17vw;
-    grid-auto-rows: 15vh 48vh 48vh;
-    grid-gap: 3vw;
-  }
-
-  .item {
-    align-items: center;
-    justify-content: center;
-    background: #FFFFFF;
-    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
-    border-radius: 4px; 
-  }
-  
-  .item5 {
-    grid-column-start: 1;
-    grid-column-end: 3;
-  }
-
-  .item6 {
-    grid-column-start: 3;
-    grid-column-end: 5;
-  }
-
-  .item7 {
-    grid-column-start: 1;
-    grid-column-end: 3;
-  }
-
-  .item8 {
-    grid-column-start: 3;
-    grid-column-end: 5;
-  }
-
-  .item .graphttl{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 10vh;
-  }
-
-  .item .imgbox {
-    /* position: relative; */
-    float: right;
-    display: inline;
-    margin-top: 3vh;
-    right: 0;
-  }
-
-  .item .imgbox img{
-    margin-right: 0.9vw;
-    width: 20px;
-    height: 20px;
-  }
-
-  .item .graphic{
-    margin-top: 0vh;
-    width: 96%;
-    height: 69%;
-  }
-
-  .item h6{
-    /* position: absolute; */
-    margin-top: 3vh;
-    margin-left: 7vw;
-    margin-right: 1.5vw;
-    font-family: 'Poppins';
-    font-weight: 500;
-    font-size: 18px;
-    letter-spacing: 0.02em; 
-    color: #004EDA;
-  }
-
-  .item7 h6{
-    margin-left: 10%;
-  }
-
-  .item8 h6{
-    margin-left: 12vw;
-  }
-
-  .item h5{
-    height: 0;
-    font-family: 'Poppins';
-    font-weight: 500;
-    font-size: 18px;
-    letter-spacing: 0.02em;
-    color: #5A5A5F;
-    margin-top: 2.5vh;
-    margin-left: 1vw;
+  width: 100%;
+  justify-content: center;
+  padding-top: 100px;
+  display: grid;
+  grid-template-columns: 17vw 17vw 17vw 17vw;
+  grid-auto-rows: 15vh 48vh 48vh;
+  grid-gap: 3vw;
 }
 
-.item p{
-    font-family: 'Poppins';
-    font-weight: 500;
-    font-size: 30px;
-    letter-spacing: 0.02em; 
-    color: #004EDA;
-    margin-left: 1vw;
-    margin-top: 0vh;
+.item {
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.item5 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.item6 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.item7 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.item8 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.item .graphttl {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 10vh;
+}
+
+.item .imgbox {
+  /* position: relative; */
+  float: right;
+  display: inline;
+  margin-top: 3vh;
+  right: 0;
+}
+
+.item .imgbox img {
+  margin-right: 0.9vw;
+  width: 20px;
+  height: 20px;
+}
+
+.item .graphic {
+  margin-top: 0vh;
+  width: 96%;
+  height: 69%;
+}
+
+.item h6 {
+  /* position: absolute; */
+  margin-top: 3vh;
+  margin-left: 7vw;
+  margin-right: 1.5vw;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  color: #004eda;
+}
+
+.item7 h6 {
+  margin-left: 10%;
+}
+
+.item8 h6 {
+  margin-left: 12vw;
+}
+
+.item h5 {
+  height: 0;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  color: #5a5a5f;
+  margin-top: 2.5vh;
+  margin-left: 1vw;
+}
+
+.item p {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 30px;
+  letter-spacing: 0.02em;
+  color: #004eda;
+  margin-left: 1vw;
+  margin-top: 0vh;
 }
 
 canvas {
   /* margin-top: 0; */
-  height: 80% !important; 
+  height: 80% !important;
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
   .grid-container {
     grid-template-columns: 36vw 36vw;
     grid-template-rows: 15vh 15vh 48vh 48vh 48vh 48vh;
@@ -148,13 +148,12 @@ canvas {
     grid-column-end: 3;
   }
 
-  .item p{
+  .item p {
     font-size: 20px;
     margin-top: 0vh;
   }
 
-  .item h5{
+  .item h5 {
     font-size: 13px;
   }
-
 }
