@@ -6,7 +6,7 @@ import { Url } from "../../api/url";
 
 const Database = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(8);
+  const [totalPages, setTotalPages] = useState(1);
   const [data, setData] = useState([]);
 
   const getData = async (page) => {
