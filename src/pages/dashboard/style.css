@@ -19,6 +19,7 @@
 
 .dashbox {
   background: #f2f2f8;
+  height: 160vh;
 }
 
 .grid-container {
@@ -26,8 +27,8 @@
   justify-content: center;
   padding-top: 100px;
   display: grid;
-  grid-template-columns: 17vw 17vw 17vw 17vw;
-  grid-auto-rows: 15vh 48vh 48vh;
+  grid-template-columns: 18vw 18vw 18vw 18vw;
+  grid-auto-rows: 15vh 55vh 55vh;
   grid-gap: 3vw;
 }
 
@@ -120,6 +121,8 @@
 canvas {
   /* margin-top: 0; */
   height: 80% !important;
+  width: 88% !important;
+  margin-left: 4% !important;
 }
 
 @media (max-width: 768px) {
