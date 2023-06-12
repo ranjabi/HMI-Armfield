@@ -13,11 +13,14 @@ const Dashboard = () => {
   const [timestamp, setTimestamp] = useState([]);
   const [setPointT1, setSetPointT1] = useState([]);
   const [holdingT1, setHoldingT1] = useState([]);
+  const [modelT1, setModelT1] = useState([]);
   const [setPointT2, setSetPointT2] = useState([]);
   const [heaterT2, setHeaterT2] = useState([]);
+  const [modelT2, setModelT2] = useState([]);
   const [heatedT4, setHeatedT4] = useState([]);
   const [setPointF1, setSetPointF1] = useState([]);
   const [feedF1, setFeedF1] = useState([]);
+  const [modelF1, setModelF1] = useState([]);
 
   const getData = async () => {
     try {
@@ -34,20 +37,26 @@ const Dashboard = () => {
       let tempTime = [];
       let tempSetPointT1 = [];
       let tempHoldingT1 = [];
+      let tempModelT1 = [];
       let tempSetPointT2 = [];
       let tempHeaterT2 = [];
+      let tempModelT2 = [];
       let tempHeatedT4 = [];
       let tempSetPointF1 = [];
       let tempFeedF1 = [];
+      let tempModelF1 = [];
 
       data.forEach((e) => {
         tempSetPointT1.push(e.set_point_t1);
         tempHoldingT1.push(e.holding_t1);
+        tempModelT1.push(e.model_t1);
         tempSetPointT2.push(e.set_point_t2);
         tempHeaterT2.push(e.heater_t2);
+        tempModelT2.push(e.model_t2);
         tempHeatedT4.push(e.heated_feed_t4);
-        tempSetPointF1.push(e.set_point_t3);
+        tempSetPointF1.push(e.set_point_f1);
         tempFeedF1.push(e.feed_flow_f1);
+        tempModelF1.push(e.model_f1);
 
         count++;
         if(count == data.length){
@@ -79,11 +88,14 @@ const Dashboard = () => {
       setTimestamp(tempTime);
       setSetPointT1(tempSetPointT1);
       setHoldingT1(tempHoldingT1);
+      setModelT1(tempModelT1);
       setSetPointT2(tempSetPointT2);
       setHeaterT2(tempHeaterT2);
+      setModelT2(tempModelT2);
       setHeatedT4(tempHeatedT4);
       setSetPointF1(tempSetPointF1);
       setFeedF1(tempFeedF1);
+      setModelF1(tempModelF1);
     } catch (error) {
       console.log(error);
     }
@@ -110,6 +122,13 @@ const Dashboard = () => {
         borderColor: "#E0712F",
         borderWidth: 1,
       },
+      {
+        label: "Model T1",
+        data: modelT1,
+        backgroundColor: "red",
+        borderColor: "red",
+        borderWidth: 1,
+      },
     ],
   };
 
@@ -130,6 +149,13 @@ const Dashboard = () => {
         borderColor: "#E0712F",
         borderWidth: 1,
       },
+      {
+        label: "Model T2",
+        data: modelT2,
+        backgroundColor: "red",
+        borderColor: "red",
+        borderWidth: 1,
+      }
     ],
   };
 
@@ -163,6 +189,13 @@ const Dashboard = () => {
         borderColor: "#E0712F",
         borderWidth: 1,
       },
+      {
+        label: "model F1",
+        data: modelF1,
+        backgroundColor: "red",
+        borderColor: "red",
+        borderWidth: 1,
+      }
     ],
   };
   return (

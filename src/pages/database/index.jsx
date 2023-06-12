@@ -115,6 +115,9 @@ const Database = () => {
               <th>Set Point T1</th>
               <th>Set Point T2</th>
               <th>Set Point F1</th>
+              <th>Model T1</th>
+              <th>Model T2</th>
+              <th>Model F1</th>
               <th>
                 Valve
                 <br />
@@ -149,7 +152,10 @@ const Database = () => {
                     <td>{row.pump_n2}</td>
                     <td>{row.set_point_t1}</td>
                     <td>{row.set_point_t2}</td>
-                    <td>{row.set_point_t3}</td>
+                    <td>{row.set_point_f1}</td>
+                    <td>{row.model_t1}</td>
+                    <td>{row.model_t2}</td>
+                    <td>{row.model_f1}</td>
                     <td>{row.valve_tank_a}</td>
                     <td>{date}</td>
                   </tr>

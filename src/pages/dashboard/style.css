@@ -28,7 +28,7 @@
   padding-top: 100px;
   display: grid;
   grid-template-columns: 18vw 18vw 18vw 18vw;
-  grid-auto-rows: 15vh 55vh 55vh;
+  grid-auto-rows: 15vh 50vh 50vh;
   grid-gap: 3vw;
 }
 
@@ -42,28 +42,28 @@
 
 .item5 {
   padding-left: 10px;
-  padding-right: 18px;
+  padding-right: 12px;
   grid-column-start: 1;
   grid-column-end: 3;
 }
 
 .item6 {
   padding-left: 10px;
-  padding-right: 18px;
+  padding-right: 12px;
   grid-column-start: 3;
   grid-column-end: 5;
 }
 
 .item7 {
   padding-left: 10px;
-  padding-right: 18px;
+  padding-right: 12px;
   grid-column-start: 1;
   grid-column-end: 3;
 }
 
 .item8 {
   padding-left: 10px;
-  padding-right: 18px;
+  padding-right: 12px;
   grid-column-start: 3;
   grid-column-end: 5;
 }
@@ -128,7 +128,7 @@
 
 canvas {
   /* margin-top: 0; */
-  height: 80% !important;
+  /* height: 80% !important; */
   /* width: 88% !important; */
   /* margin-left: 4% !important; */
 }
