@@ -1,7 +1,16 @@
 import Header from "../../component/header";
 import "./style.css"
 import HW from "../../assets/Heater Water.jpg"
+import Filled from "../../assets/tangki/filled water 2px.png"
+import { useState } from "react";
+
 const HMI = () => {
+    const [L1, setL1] = useState(250);
+
+    function getConversion(l1) {
+        return (l1 / 250) * 100;
+    }
+
     return (
         <>
             <Header/>
@@ -75,6 +84,14 @@ const HMI = () => {
                     <div className="C1">
                         <span className="spanC1">C1</span>
                         <p> 0.0 mS</p>
+                    </div>
+                    <div className="filled-container">
+                        <img 
+                            src={Filled} 
+                            alt="filled water" 
+                            className="filled-water" 
+                            style={{height: `${getConversion(L1)}%`}} 
+                        />
                     </div>
                 </div>
             </div>
