@@ -25,9 +25,9 @@ function App() {
           exact
           path="/hmi"
           element={
-            <ProtectedRoute>
+            // <ProtectedRoute>
               <HMI />
-            </ProtectedRoute>
+            // </ProtectedRoute>
           }
         />
         <Route

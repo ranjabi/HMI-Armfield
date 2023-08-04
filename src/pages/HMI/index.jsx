@@ -2,14 +2,21 @@ import Header from "../../component/header";
 import "./style.css"
 import HW from "../../assets/Heater Water.jpg"
 import Filled from "../../assets/tangki/filled water 2px.png"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const HMI = () => {
-    const [L1, setL1] = useState(250);
+    const [L1, setL1] = useState(0);
 
     function getConversion(l1) {
         return (l1 / 250) * 100;
     }
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setL1((prev) => (prev + 1) % 250);
+        }, 10);
+        return () => clearInterval(interval);
+    }, [])
 
     return (
         <>
