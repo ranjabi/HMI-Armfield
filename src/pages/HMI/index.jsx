@@ -3,20 +3,50 @@ import "./style.css"
 import HW from "../../assets/Heater Water.jpg"
 import Filled from "../../assets/tangki/filled water 2px.png"
 import { useEffect, useState } from "react";
+import MesinKondisi1 from "../../assets/mesin-kondisi-1.svg"
+import MesinKondisi2 from "../../assets/mesin-kondisi-2.svg"
 
 const HMI = () => {
     const [L1, setL1] = useState(0);
-
+    const [T1, setT1] = useState(1);
+    const [SP, setSP] = useState(-1);
+    
     function getConversion(l1) {
         return (l1 / 250) * 100;
     }
-
+    
     useEffect(() => {
-        const interval = setInterval(() => {
+        const l1Interval = setInterval(() => {
             setL1((prev) => (prev + 1) % 250);
         }, 10);
-        return () => clearInterval(interval);
+        return () => clearInterval(l1Interval);
     }, [])
+
+    useEffect(() => {
+        const T1SPInterval = setInterval(() => {
+            setT1((prev) => prev * -1);
+            setSP((prev) => prev * -1);
+        }, 1000);
+        return () => clearInterval(T1SPInterval);
+    }, [])
+
+    let imageSource;
+    if (T1 < SP) {
+        imageSource = MesinKondisi1;
+    } else if (T1 > SP) {
+        imageSource = MesinKondisi2;
+    }
+
+    const style = {
+        height: '70%',
+        width: '40%',
+        marginTop: '100px',
+        zIndex: '1',
+        position: 'relative',
+        backgroundImage: `url(${imageSource})`,
+        backgroundSize: 'contain',
+        backgroundRepeat: 'no-repeat',
+    }
 
     return (
         <>
@@ -47,7 +77,7 @@ const HMI = () => {
                         </div>
                     </fieldset>
                 </div>
-                <div className="gambar">
+                <div style={style}>
                     <div className="SP1">
                         <span className="spanSP1">S-P</span>
                         <input type="number" id = "SP1" />
